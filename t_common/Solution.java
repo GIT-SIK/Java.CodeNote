@@ -1,3 +1,5 @@
+/* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/118666 */
+
 package t_common;
 
 import java.util.HashMap;
@@ -72,7 +74,7 @@ class Solution {
         answer += typeEqulse(score,'C', 'F');
         answer += typeEqulse(score,'J', 'M');
         answer += typeEqulse(score,'A', 'N');
-        
+
         return answer;
     }
 

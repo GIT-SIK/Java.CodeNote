@@ -6,8 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Solution {
-
-
+    
     public static void main(String[] args) {
 
     Solution s = new Solution();
@@ -21,12 +20,10 @@ class Solution {
 
 
     /* 입력 */
-    String x = s.solution(survey2, choices2);
+    String result = s.solution(survey, choices);
 
-    System.out.println(x);
+    System.out.println(result);
     }
-    // 1 2 3 4 5 6 7
-    // 3 2 1 0 1 2 3
 
     /* 출력 */
     public String solution(String[] survey, int[] choices) {
@@ -43,8 +40,6 @@ class Solution {
         score.put('A', 0);
         score.put('N', 0);
 
-        // 1 2 3 4 5 6 7
-        // 3 2 1 0 1 2 3
         for(int i=0; i<survey.length; i++){
             
             char type1 = survey[i].charAt(0);
@@ -63,11 +58,7 @@ class Solution {
 
         }
 
-        for(char key: score.keySet()){
-            int value = score.get(key);
-            System.out.println(key+","+value) ;
-        }
-
+        /* 합산 점수 계산 */
         String answer = "";
 
         answer += typeEqulse(score,'R', 'T');

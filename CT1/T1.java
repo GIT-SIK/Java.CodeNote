@@ -20,9 +20,8 @@ class T1 {
 
 
     /* 입력 */
-    String result = s.solution(survey, choices);
-
-    System.out.println(result);
+        System.out.println(s.solution(survey, choices));
+        System.out.print(s.solution(survey2, choices2));
     }
 
     /* 출력 */
@@ -54,12 +53,9 @@ class T1 {
 
         /* 합산 점수 계산 */
         String answer = "";
-
-        answer += typeEqulse(score,'R', 'T');
-        answer += typeEqulse(score,'C', 'F');
-        answer += typeEqulse(score,'J', 'M');
-        answer += typeEqulse(score,'A', 'N');
-
+        for(int i=0; i<type.length; i+=2){
+            answer += typeEqulse(score, type[i] , type[i+1]);
+        }
         return answer;
     }
 

@@ -1,15 +1,15 @@
 /* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/118666 */
 
-package t_common;
+package CT1;
 
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
+class T1 {
     
     public static void main(String[] args) {
 
-    Solution s = new Solution();
+    T1 s = new T1();
 
     /* 입력 타입 */
     String[] survey = {"AN", "CF", "MJ", "RT", "NA"};

@@ -1,3 +1,6 @@
+/* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12906 */
+/* 제한사항 반영하지 않음 */
+
 package CT2;
 
 import java.util.ArrayList;

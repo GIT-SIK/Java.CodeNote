@@ -31,14 +31,10 @@ class T1 {
        
         Map<Character,Integer> score = new HashMap();
 
-        score.put('R', 0);
-        score.put('T', 0);
-        score.put('C', 0);
-        score.put('F', 0);
-        score.put('J', 0);
-        score.put('M', 0);
-        score.put('A', 0);
-        score.put('N', 0);
+        char[] type = {'R','T','C','F','J','M','A','N'};
+        for(char t:type){
+            score.put(t,0);
+        }
 
         for(int i=0; i<survey.length; i++){
             
@@ -54,8 +50,6 @@ class T1 {
                     score.put(type1, score.get(type1) + ((typeCheck-4)*-1));
                 }
             }
-
-
         }
 
         /* 합산 점수 계산 */

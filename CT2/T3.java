@@ -10,8 +10,16 @@ public class T3 {
     public static void main(String[] args) {
 
         T3 t3 = new T3();
-        int[] numbers = {1,2,3,4,3,9};
+
+        int[] numbers = {2,1,3,4,1};
         for(int print:t3.sum(numbers)){
+            System.out.print(print + " ");
+        }
+
+        System.out.println("");
+
+        int[] numbers2 = {5,0,2,7};
+        for(int print:t3.sum(numbers2)){
             System.out.print(print + " ");
         }
 

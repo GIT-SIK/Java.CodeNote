@@ -40,15 +40,12 @@ class T1 {
             char type1 = survey[i].charAt(0);
             char type2 = survey[i].charAt(1);
             int typeCheck = choices[i];
-
-            if(typeCheck !=0 || typeCheck!=4) {
                 if(typeCheck > 4) {
                     score.put(type2, score.get(type2) + (typeCheck-4));
                 } else 
                 {
                     score.put(type1, score.get(type1) + ((typeCheck-4)*-1));
                 }
-            }
         }
 
         /* 합산 점수 계산 */

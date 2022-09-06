@@ -1,7 +1,7 @@
 /* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12906 */
 /* 키패드 누르기 */
 
-package CT1;
+package Programmers.LV1.T;
 
 public class T2 {
 

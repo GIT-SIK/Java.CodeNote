@@ -1,6 +1,7 @@
 /* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/118666 */
+/* 성격 유형 검사하기 */
 
-package CT1;
+package Programmers.LV1.T;
 
 import java.util.HashMap;
 import java.util.Map;

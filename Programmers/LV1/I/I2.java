@@ -1,18 +1,18 @@
 /* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/86051 */
 /* 없는 숫자 합산하기 */
 
-package CT2;
+package Programmers.LV1.I;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class T2 {
+public class I2 {
 
     public static void main(String[] args) {
 
-        T2 t2 = new T2();
+        I2 t2 = new I2();
         int[] numbers = {1,2,4,5,6,1,7,9};
         System.out.print(t2.solution(numbers));
 

@@ -1,15 +1,15 @@
 /* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/68644  */
 /* 두 개 뽑아서 더하기 */
 
-package CT2;
+package Programmers.LV1.I;
 
 import java.util.*;
 
-public class T3 {
+public class I3 {
 
     public static void main(String[] args) {
 
-        T3 t3 = new T3();
+        I3 t3 = new I3();
 
         int[] numbers = {2,1,3,4,1};
         for(int print:t3.sum(numbers)){

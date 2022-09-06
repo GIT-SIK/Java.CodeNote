@@ -1,15 +1,15 @@
 /* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12906 */
 /* 제한사항 반영하지 않음 */
 
-package CT2;
+package Programmers.LV1.I;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class T1 {
+public class I1 {
     public static void main(String[] args) {
 
-        T1 u = new T1();
+        I1 u = new I1();
 
         int[] arr = {1,1,3,3,0,1,1};
         System.out.println(u.unique(arr));

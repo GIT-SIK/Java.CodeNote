@@ -1,12 +1,12 @@
 /* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/76501  */
 /* 음양 더하기 */
 
-package CT2;
+package Programmers.LV1.I;
 
-public class T5 {
+public class I5 {
 
     public static void main(String[] args){
-        T5 t5 = new T5();
+        I5 t5 = new I5();
         int[] absolutes = {4,7,12};
         boolean[] signs = {true,false,true};
         System.out.println(t5.select(absolutes,signs));

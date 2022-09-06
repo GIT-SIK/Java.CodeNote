@@ -1,13 +1,13 @@
 /* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12969 */
 /* 직사각형 별찍기 / 기본 */
 
-package CT2;
+package Programmers.LV1.I;
 
 import java.util.Scanner;
 
-public class T4 {
+public class I4 {
     public static void main(String[] args){
-        T4 t4 = new T4();
+        I4 t4 = new I4();
         Scanner sc = new Scanner(System.in);
         int h = sc.nextInt();
         int w = sc.nextInt();

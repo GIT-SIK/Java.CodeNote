@@ -1,4 +1,4 @@
-/* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/12906 */
+/* 문제링크 : https://school.programmers.co.kr/learn/courses/30/lessons/67256 */
 /* 키패드 누르기 */
 
 package Programmers.LV1.T;
@@ -40,17 +40,18 @@ public class T2 {
                 y--;
                 x=3;
             }
+            x--;
             //y 0 1 2 통합 => 3,6,9 -> --y (0,1,2)
-            //x 1 2 3 통합 => 1,2,3 -> 3배수 (1,2,0+3)
+            //x 0 1 2 통합 => 1,2,3 -> 3배수= (x = 3-1), 그 외 (x=x-1) (1-1,2-1,0+3-1)
             switch(x) {
                 // 왼손
-                case 1:
+                case 0:
                     leftHand[1] = x;
                     leftHand[0] = y;
                     click += "L";
                     break;
                 // 중앙
-                case 2:
+                case 1:
                     int leftHandEq = (Math.abs(leftHand[0]-y))+(Math.abs(leftHand[1]-x));
                     int rightHandEq = (Math.abs(rightHand[0]-y))+(Math.abs(rightHand[1]-x));
 
@@ -65,7 +66,7 @@ public class T2 {
                     }
                     break;
                 // 오른쪽
-                case 3:
+                case 2:
                     rightHand[1] = x;
                     rightHand[0] = y;
                     click += "R";
@@ -73,35 +74,7 @@ public class T2 {
                 default:
                     break;
             }
-
         }
-
-
         return click;
     }
-
-    /* 손 위치 찾는 로직 (예시)
-    public int[] handFind(char[][] numberKeys, char hand){
-        boolean check = false;
-        int temp[] = {0, 0};
-        for(char[] i: numberKeys){
-            temp[1] = 0;
-            for(char j: i) {
-                if (j == hand){
-                    check = true;
-                    break;
-                }
-                else {
-                    temp[1]++;
-                }
-            }
-            if(check) {
-            break;
-            }
-            temp[0]++;
-        }
-
-        return temp;
-    }
-     */
 }

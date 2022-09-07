@@ -16,6 +16,11 @@ public class I2 {
     }
 
     public int eq(int number) {
+        if(number > 1000000) {
+            return -1;
+        }
+
+
         I2 i2 = new I2();
 
         int temp = i2.binary(number);

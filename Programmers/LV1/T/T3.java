@@ -27,26 +27,26 @@ public class T3 {
         Stack<Integer> stack = new Stack<>();
 
         /* 크레인 */
-        for (int m = 0; m < moves.length; m++) { // 뽑을 위치 반복문
+        for (int m : moves) { // 뽑을 위치 반복문
             for (int j = 0; j < board.length; j++) {
-                if (board[j][moves[m] - 1] != 0) { // LIFO하기 위해 빈값이 아닌 값을 찾는 조건문
+                if (board[j][m-1] != 0) { // LIFO하기 위해 빈값이 아닌 값을 찾는 조건문
                     try { /* elementAt 오류 해결을 위한 try문 => 스택이 비어있으면 오류발생
 
                         /* --- 일치하는 값은 마지막값을 POP / 일치하지 않으면 배열값을 PUSH ---*/
-                        if (stack.elementAt(stack.size() - 1) == board[j][moves[m] - 1]) {
+                        if (stack.elementAt(stack.size() - 1) == board[j][m-1]) {
                             stack.pop();
                             popCount += 2;
                         } else {
-                            stack.push(board[j][moves[m] - 1]);
+                            stack.push(board[j][m-1]);
                         }
 
                         /* PUSH, POP으로 인해 사용된 배열 값 초기화 */
-                        board[j][moves[m] - 1] = 0;
+                        board[j][m-1] = 0;
                         break;
                     } catch(Exception e){
                         /* 스택값이 없으면 PUSH */
-                        stack.push(board[j][moves[m] - 1]);
-                        board[j][moves[m] - 1] = 0;
+                        stack.push(board[j][m-1]);
+                        board[j][m-1] = 0;
                         break;
 
                     }

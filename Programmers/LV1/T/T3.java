@@ -39,17 +39,13 @@ public class T3 {
                         } else {
                             stack.push(board[j][m-1]);
                         }
-
-                        /* PUSH, POP으로 인해 사용된 배열 값 초기화 */
-                        board[j][m-1] = 0;
-                        break;
                     } catch(Exception e){
                         /* 스택값이 없으면 PUSH */
                         stack.push(board[j][m-1]);
-                        board[j][m-1] = 0;
-                        break;
-
                     }
+                    /* PUSH, POP으로 인해 사용된 배열 값 초기화 */
+                    board[j][m-1] = 0;
+                    break;
                 }
             }
         }

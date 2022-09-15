@@ -1,9 +1,10 @@
 /* 문제링크 :  */
 /*  */
 
-package Programmers.LV1.T;
+package Programmers.LV2.I;
 
-public class T4 {
+public class I3 {
+
     public static void main(String[] args) {
 
     }

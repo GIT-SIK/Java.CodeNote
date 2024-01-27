@@ -65,7 +65,7 @@ local.properties
 # STS (Spring Tool Suite)
 .springBeans
 
-# code Recommenders
+# Code Recommenders
 .recommenders/
 
 # Annotation Processing
@@ -195,7 +195,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS code ###
+### VS Code ###
 .vscode/
 
 ### Some additional ignores (sort later)

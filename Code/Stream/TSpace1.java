@@ -4,6 +4,7 @@ package Code.Stream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class TSpace1 {
@@ -24,7 +25,7 @@ public class TSpace1 {
 
         /* Method */
          tConcat(lsStr1, lsStr2);
-         tReduce(lsInt1);
+         tListSum(lsInt1);
 
     }
 
@@ -32,9 +33,13 @@ public class TSpace1 {
     static void tConcat(List<String> ls1, List<String> ls2){
         Stream.concat(ls1.stream(), ls2.stream()).map(String::toUpperCase).forEach(System.out::println);
     }
-    /* reduce */
-    static void tReduce(List<Integer> ls1){
-        ls1.stream().reduce((i, j) -> i + j).ifPresent(temp -> System.out.print(temp));
+
+    static void tListSum(List<Integer> ls1){
+        /* reduce (Sum) -> ifPresent */
+        System.out.print("reduce O : ");
+        ls1.stream().reduce((i, j) -> i + j).ifPresent(temp -> System.out.println(temp));
+        /* mapToInt -> Sum */
+        System.out.println("reduce X : " + ls1.stream().mapToInt(Integer::intValue).sum());
     }
 
 }

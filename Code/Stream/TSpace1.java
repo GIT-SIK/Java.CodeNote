@@ -9,6 +9,15 @@ import java.util.stream.Stream;
 
 public class TSpace1 {
 
+    /* 실행 시간 측정 메소드 */
+    public static void methodExecutionTimer(Runnable method, String methodName) {
+        long start = System.currentTimeMillis();
+        method.run();
+        long end = System.currentTimeMillis();
+        System.out.println(methodName + "의 실행 시간: " + (end - start) / 1000.0 + "초 \n");
+    }
+
+
     public static void main(String[] args){
         /* Collect add */
         List<String> lsStr1 = new ArrayList<>(Arrays.asList("a","b","c"));
@@ -23,10 +32,10 @@ public class TSpace1 {
         Stream<String> stEg2 = Arrays.stream(new String[] {"a", "b", "c"});
 
 
-        /* Method */
-        tListConcat(lsStr1, lsStr2);
-        tListSum(lsInt1);
-        tListFilter(lsInt1);
+        /* Method Execution */
+        methodExecutionTimer(() -> tListConcat(lsStr1, lsStr2), "tListConcat");
+        methodExecutionTimer(() -> tListSum(lsInt1), "tListSum");
+        methodExecutionTimer(() -> tListFilter(lsInt1),"tListFilter");
 
     }
 

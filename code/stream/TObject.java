@@ -1,4 +1,4 @@
-package Code.Stream;
+package code.stream;
 
 public class TObject {
 }

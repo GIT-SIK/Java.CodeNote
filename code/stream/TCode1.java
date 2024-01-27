@@ -1,22 +1,13 @@
-package Code.Stream;
+package code.stream;
 
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
+import code.stream.util.TimeUtil;
 
-public class TSpace1 {
-
-    /* 실행 시간 측정 메소드 */
-    public static void methodExecutionTimer(Runnable method, String methodName) {
-        long start = System.currentTimeMillis();
-        method.run();
-        long end = System.currentTimeMillis();
-        System.out.println(methodName + "의 실행 시간: " + (end - start) / 1000.0 + "초 \n");
-    }
-
+public class TCode1 {
 
     public static void main(String[] args){
         /* Collect add */
@@ -33,9 +24,9 @@ public class TSpace1 {
 
 
         /* Method Execution */
-        methodExecutionTimer(() -> tListConcat(lsStr1, lsStr2), "tListConcat");
-        methodExecutionTimer(() -> tListSum(lsInt1), "tListSum");
-        methodExecutionTimer(() -> tListFilter(lsInt1),"tListFilter");
+        TimeUtil.methodExecutionTimer(() -> tListConcat(lsStr1, lsStr2), "tListConcat");
+        TimeUtil.methodExecutionTimer(() -> tListSum(lsInt1), "tListSum");
+        TimeUtil.methodExecutionTimer(() -> tListFilter(lsInt1),"tListFilter");
 
     }
 

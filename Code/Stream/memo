@@ -1,0 +1,31 @@
+STREAM
+생성 -> 중간 연산 -> 최종 연산 -> 결과
+
+*-*-*-* Stream Add *-*-*-*
+- Arrays
+- Collection, List, Set
+- Empty
+
+- builder()
+- generate()
+- iterate()
+
+- String
+- Files
+- Parallel <-> Sequential
+
+- Concat
+
+*-*-*-* Intermediate *-*-*-*
+- Filtering
+- Mapping
+- Sorting
+- Iterating
+
+
+*-*-*-* Result *-*-*-*
+- Calculating
+- Reduction
+- Collecting
+- Matching
+- Iterating

@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 import code.stream.util.TimeUtil;
+import code.stream.util.CommonUtil;
 
 public class TCode1 {
 
@@ -22,10 +23,10 @@ public class TCode1 {
         Stream<String> stEg2 = Arrays.stream(new String[] { "a", "b", "c" });
 
         /* Method Execution */
-        TimeUtil.methodExecutionTimer(() -> tListConcat(lsStr1, lsStr2), "tListConcat");
-        TimeUtil.methodExecutionTimer(() -> tListSumReduce(lsInt1), "tListSumReduce");
-        TimeUtil.methodExecutionTimer(() -> tListSumMapToInt(lsInt1), "tListSumMapToInt");
-        TimeUtil.methodExecutionTimer(() -> tListFilter(lsInt1), "tListFilter");
+        TimeUtil.methodExecutionTimer(() -> tListConcat(lsStr1, lsStr2), "tListConcat",true);
+        TimeUtil.methodExecutionTimer(() -> tListSumReduce(lsInt1), "tListSumReduce",true);
+        TimeUtil.methodExecutionTimer(() -> tListSumMapToInt(lsInt1), "tListSumMapToInt",true);
+        TimeUtil.methodExecutionTimer(() -> tListFilter(lsInt1), "tListFilter",true);
 
     }
 
@@ -34,8 +35,6 @@ public class TCode1 {
         /* 두 Stream을 합쳐서 대문자로 변환 후 출력합니다. */
         System.out.print("Concat : ");
         Stream.concat(ls1.stream(), ls2.stream()).map(String::toUpperCase).forEach(i -> System.out.print(i + " "));
-        ln();
-
     }
 
     static void tListSumReduce(List<Integer> ls) {
@@ -49,7 +48,6 @@ public class TCode1 {
         /* mapToInt -> Sum */
         /* Int 변환하여 Sum 메서드를 통해 결과를 출력합니다. */
         System.out.print("reduce X : " + ls.stream().mapToInt(Integer::intValue).sum());
-        ln();
     }
 
     /* Filter */
@@ -57,11 +55,6 @@ public class TCode1 {
         /* filter -> forEach */
         System.out.print("filter [item%3==0] : ");
         ls.stream().filter(item -> item % 3 == 0).forEach(i -> System.out.print(i + " "));
-        ln();
     }
 
-    /* ** println ** */
-    static void ln() {
-        System.out.println();
-    }
 }

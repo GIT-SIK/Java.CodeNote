@@ -1,11 +1,12 @@
-package java.stream.code;
+package example.stream.code;
 
-import java.stream.interfaces.TCode1Operations;
-import java.stream.util.TimeUtil;
+import example.stream.interfaces.TCode1Operations;
+import example.stream.util.TimeUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class TCode1 implements TCode1Operations {
@@ -31,8 +32,18 @@ public class TCode1 implements TCode1Operations {
             TimeUtil.methodExecutionTimer(() -> tc.tListSumMapToInt(lsInt1), "tListSumMapToInt",true);
             TimeUtil.methodExecutionTimer(() -> tc.tListFilter(lsInt1), "tListFilter",true);
 
+
+            /* Method Execution (Return) */
+            List<Integer> lsInt1r = new ArrayList<>();
+
+            TimeUtil.methodExecutionTimer(() -> {
+                lsInt1r.addAll(tc.trListFilter(lsInt1));
+                System.out.print(lsInt1r);
+            }, "trListFilter",true);
+
         }
 
+        /* ** RETURN X ** */
         /* [List] concat -> map -> forEach */
         public void tListConcat(List<String> ls1, List<String> ls2) {
             /* 두 Stream을 합쳐서 대문자로 변환 후 출력합니다. */
@@ -53,11 +64,15 @@ public class TCode1 implements TCode1Operations {
             System.out.print("reduce X : " + ls.stream().mapToInt(Integer::intValue).sum());
         }
 
-    /* [List] filter -> forEach */
+        /* [List] filter -> forEach */
         public void tListFilter(List<Integer> ls) {
-            /* filter -> forEach */
             System.out.print("filter [item%3==0] : ");
             ls.stream().filter(item -> item % 3 == 0).forEach(i -> System.out.print(i + " "));
         }
 
+        /* ** RETURN O ** */
+        /* [List] filter -> forEach(return) */
+        public List<Integer> trListFilter(List<Integer> ls){
+            return ls.stream().filter(item -> item % 3 == 0).collect(Collectors.toList());
+        }
     }

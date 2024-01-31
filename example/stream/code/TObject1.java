@@ -1,13 +1,13 @@
-package java.stream.code;
-import java.stream.interfaces.TObject1Operations;
-import java.stream.objects.DObj1;
+package example.stream.code;
+import example.stream.objects.DObj1;
+import example.stream.interfaces.TObject1Operations;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
-import java.stream.util.TimeUtil;
+import example.stream.util.TimeUtil;
 
 public class TObject1 implements TObject1Operations {
 
@@ -53,7 +53,7 @@ public class TObject1 implements TObject1Operations {
      */
 
 
-    /* forEach */
+    /* [List] forEach */
     public void tListIfIntV1(List<DObj1> Objs) {
         Objs.stream().forEach(obj -> {
             if (obj.getIntValue1() == 1) {

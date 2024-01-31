@@ -2,8 +2,9 @@
 note
 ### Coding Test ###
 Tester/
-
 target/
+git_memo
+
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###

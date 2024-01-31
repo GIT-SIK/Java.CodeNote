@@ -15,4 +15,7 @@ public interface TCode1Operations {
 
     /* [List] filter -> forEach */
     void tListFilter(List<Integer> ls);
+
+    /* [List] filter -> forEach(return) */
+    List<Integer> trListFilter(List<Integer> ls);
 }

@@ -1,6 +1,7 @@
-package java.stream.interfaces;
+package example.stream.interfaces;
 
-import java.stream.objects.DObj1;
+import example.stream.objects.DObj1;
+
 import java.util.List;
 import java.util.stream.Stream;
 

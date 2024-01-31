@@ -1,4 +1,4 @@
-package java.stream.objects;
+package example.stream.objects;
 
 public class DObj1 {
     private int intValue1;

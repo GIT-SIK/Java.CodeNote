@@ -1,4 +1,4 @@
-package java.stream.util;
+package example.stream.util;
 
 public class CommonUtil {
 }

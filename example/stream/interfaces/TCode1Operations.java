@@ -1,4 +1,4 @@
-package java.stream.interfaces;
+package example.stream.interfaces;
 
 import java.util.List;
 

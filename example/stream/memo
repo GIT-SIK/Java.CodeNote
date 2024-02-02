@@ -16,16 +16,31 @@ STREAM
 
 - Concat
 
-*-*-*-* Intermediate *-*-*-*
+*-*-*-* Intermediate (중간연산) *-*-*-*
 - Filtering
 - Mapping
 - Sorting
 - Iterating
+map	    입력 T 타입 요소를 R 타입 요소로 변환
+filter	    조건을 충족하는 요소를 필터링
+flatMap	    중첩된 구조를 한 단계 평탄화하고 단일 원소로 변환한 스트림 생성
+peek	    스트림 내의 각각의 요소를 대상으로 특정 연산을 수행
+skip	    처음 n개의 요소를 제외하는 스트림 생성
+limit	    maxSize까지의 요소만 제공하는 스트림 생성
+distinct	    스트림 내의 요소의 중복 제거
+sorted	    스트림 내 요소를 정렬
 
 
-*-*-*-* Result *-*-*-*
+
+*-*-*-* Result (결과) *-*-*-*
 - Calculating
 - Reduction
 - Collecting
 - Matching
 - Iterating
+forEach	    스트림을 순회
+reduce	    연산을 이용해 모든 스트림 요소를 처리하여 하나의 결과로 만듦
+collect	    스트림의 연산 결과를 컬렉션 형태로 모아줌
+
+
+

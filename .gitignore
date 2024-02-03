@@ -4,6 +4,7 @@ note
 Tester/
 target/
 git_memo
+apache-maven-3.9.6/
 
 !.mvn/wrapper/maven-wrapper.jar
 

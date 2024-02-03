@@ -45,11 +45,23 @@ collect	    스트림의 연산 결과를 컬렉션 형태로 모아줌
  * 메서드 레퍼런스 연산자
  객체::메소드 -> 왼쪽 객체의 오른쪽 메소드 사용 (따로 괄호 필요없음)
 
+  class A{
+      int b;
+      public int getB(){
+        return b;
+      }
+  }
+
+ 레퍼런스 : A::getB
+
  1. 정적 메서드 레퍼런스
- s -> Integer.parseInt(s) -> Integer::parseInt
+ 람다 : Function<String, Integer> lambda = s -> Integer.parseInt(s);
+ 레퍼런스 : Function<String, Integer> reference = Integer::parseInt
 
  2. 인스턴스 메서드 레퍼런스
- s.length() -> String::length
+ 람다 : Function<String, Integer> lambda = s -> s.length();
+ 레퍼런스 : Function<String, Integer> reference = String::length;
 
  3. 생성자 레퍼런스
- Supplier<List<String>> lambda = () -> new ArrayList<>(); -> Supplier<List<String>> reference = ArrayList::new;
+ 람다 : Supplier<List<String>> lambda = () -> new ArrayList<>();
+ 레퍼런스 : Supplier<List<String>> reference = ArrayList::new;

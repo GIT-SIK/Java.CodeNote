@@ -31,7 +31,6 @@ distinct	    스트림 내의 요소의 중복 제거
 sorted	    스트림 내 요소를 정렬
 
 
-
 *-*-*-* Result (결과) *-*-*-*
 - Calculating
 - Reduction
@@ -42,5 +41,15 @@ forEach	    스트림을 순회
 reduce	    연산을 이용해 모든 스트림 요소를 처리하여 하나의 결과로 만듦
 collect	    스트림의 연산 결과를 컬렉션 형태로 모아줌
 
+/*************************************************************/
+ * 메서드 레퍼런스 연산자
+ 객체::메소드 -> 왼쪽 객체의 오른쪽 메소드 사용 (따로 괄호 필요없음)
 
+ 1. 정적 메서드 레퍼런스
+ s -> Integer.parseInt(s) -> Integer::parseInt
 
+ 2. 인스턴스 메서드 레퍼런스
+ s.length() -> String::length
+
+ 3. 생성자 레퍼런스
+ Supplier<List<String>> lambda = () -> new ArrayList<>(); -> Supplier<List<String>> reference = ArrayList::new;

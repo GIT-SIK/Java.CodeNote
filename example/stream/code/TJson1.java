@@ -2,6 +2,7 @@ package example.stream.code;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import example.objects.DAddr;
 
 import java.util.Arrays;
@@ -29,8 +30,17 @@ public class TJson1 {
             /* type 2 */
             /* JSON 생성 */ /* List -> ObjectNode -> ArrayNode */
             ArrayNode jsonArray = objectMapper.createArrayNode();
+            
+            /* Stream */
             lsObjs.stream().map(dAddr -> dAddr.toJson(objectMapper)).forEach(jsonArray::add);
 
+            /* 일반 
+            for(DAddr dAddr : lsObjs){
+                ObjectNode jsonNode = dAddr.toJson(objectMapper);
+                jsonArray.add(jsonNode);
+            }
+            */
+            
             /* 출력 */
             System.out.println(
                     objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonArray)

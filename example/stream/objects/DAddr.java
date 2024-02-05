@@ -1,5 +1,8 @@
 package example.stream.objects;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
 public class DAddr {
     private int num;
     private String strCountry;
@@ -21,6 +24,15 @@ public class DAddr {
 
     public String getStrCity(){
         return strCity;
+    }
+
+    // JSON (TJSON1.java)
+    public ObjectNode toJson(ObjectMapper objectMapper) {
+        ObjectNode jsonNode = objectMapper.createObjectNode();
+        jsonNode.put("num", getNum());
+        jsonNode.put("strCountry", getStrCountry());
+        jsonNode.put("strCity", getStrCity());
+        return jsonNode;
     }
 
 }

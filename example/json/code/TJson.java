@@ -1,14 +1,14 @@
-package example.stream.code;
+package example.json.code;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import example.util.CommonUtil;
 import example.objects.DAddr;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class TJson1 {
-
+public class TJson {
     public static void main(String[] args) {
         /* Collect add */
         List<DAddr> lsObjs = Arrays.asList(
@@ -25,19 +25,17 @@ public class TJson1 {
 
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-
-            /* type 2 */
-            /* JSON 생성 */ /* List -> ObjectNode -> ArrayNode */
-            ArrayNode jsonArray = objectMapper.createArrayNode();
-            lsObjs.stream().map(dAddr -> dAddr.toJson(objectMapper)).forEach(jsonArray::add);
+            /* type 1 */ /* List -> ArrayNode */
+            ArrayNode jsonArrayUtil = CommonUtil.toJsonList(lsObjs,objectMapper);
 
             /* 출력 */
             System.out.println(
-                    objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonArray)
+                    objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonArrayUtil)
             );
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    }
+
+}

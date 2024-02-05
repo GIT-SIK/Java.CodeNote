@@ -1,4 +1,4 @@
-package example.stream.objects;
+package example.objects;
 
 public class DObj1 {
     private int intValue1;

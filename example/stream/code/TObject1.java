@@ -1,5 +1,5 @@
 package example.stream.code;
-import example.stream.objects.DObj1;
+import example.objects.DObj1;
 import example.stream.interfaces.TObject1Operations;
 
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
-import example.stream.util.TimeUtil;
+import example.util.TimeUtil;
 
 public class TObject1 implements TObject1Operations {
 

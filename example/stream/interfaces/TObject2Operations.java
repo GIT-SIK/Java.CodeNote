@@ -1,6 +1,6 @@
 package example.stream.interfaces;
 
-import example.stream.objects.DAddr;
+import example.objects.DAddr;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package example.stream.code;
 
-import example.stream.util.TimeUtil;
+import example.util.TimeUtil;
 
 import java.io.IOException;
 

@@ -1,7 +1,7 @@
 package example.stream.code;
 
 import example.stream.interfaces.TCode2Operations;
-import example.stream.util.TimeUtil;
+import example.util.TimeUtil;
 
 import java.util.Arrays;
 import java.util.List;

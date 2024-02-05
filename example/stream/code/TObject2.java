@@ -1,8 +1,8 @@
 package example.stream.code;
 
 import example.stream.interfaces.TObject2Operations;
-import example.stream.objects.DAddr;
-import example.stream.util.TimeUtil;
+import example.objects.DAddr;
+import example.util.TimeUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;

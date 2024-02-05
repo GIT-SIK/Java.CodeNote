@@ -1,4 +1,4 @@
-package example.stream.util;
+package example.util;
 
 public class TimeUtil {
     /* 실행 시간 측정 메소드 */

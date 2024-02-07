@@ -30,7 +30,7 @@ public class TJson {
 
     }
 
-    public void json(List<DAddr> lsObjs){
+    public void json(List<?> lsObjs){
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             /* type 1 */ /* List -> ArrayNode */

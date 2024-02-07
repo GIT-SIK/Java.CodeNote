@@ -2,14 +2,18 @@ package example.json.code;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+
+import example.util.TimeUtil;
 import example.util.CommonUtil;
 import example.objects.DAddr;
 
 import java.util.Arrays;
 import java.util.List;
 
+
 public class TJson {
     public static void main(String[] args) {
+        TJson tj = new TJson();
         /* Collect add */
         List<DAddr> lsObjs = Arrays.asList(
                 new DAddr(1, "KOREA", "SEOUL"),
@@ -22,7 +26,11 @@ public class TJson {
                 new DAddr(8, "JAPAN", "FUKUOKA"),
                 new DAddr(9, "KOREA", "SEOUL")
         );
+        TimeUtil.methodExecutionTimer(() -> tj.json(lsObjs),"json", true);
 
+    }
+
+    public void json(List<DAddr> lsObjs){
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             /* type 1 */ /* List -> ArrayNode */

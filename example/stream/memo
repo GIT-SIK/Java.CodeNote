@@ -1,47 +1,77 @@
-STREAM
+■ STREAM
 생성 -> 중간 연산 -> 최종 연산 -> 결과
 
-*-*-*-* Stream Add *-*-*-*
+■■■■■■■■■■■■■■■■■■■■■■■■ Stream Add ■■■■■■■■■■■■■■■■■■■■■■■■
 - Arrays
 - Collection, List, Set
 - Empty
 
-- builder()
-- generate()
-- iterate()
+- Stream.builder() :스트림 생성 (요소 추가(add))
+   * e :
+    Stream.Builder<String> builder = Stream.builder();
+    builder.add("A");
+    builder.add("B");
+
+- Stream.generate() : 무한스트림 생성
+   * e : Stream.generate(() -> "A");
+
+- Stream.iterate() : 초기값과 UnaryOperator 로 연속적인 요소를 생성함.
+   * e : Stream.iterate(1, n -> n + 1);
 
 - String
 - Files
 - Parallel <-> Sequential
 
-- Concat
+- Stream.concat() : 두 스트림을 결합함.
+   * 형식 : static <T> Stream<T> concat(Stream<? extends T> a, Stream<? extends T> b)
 
-*-*-*-* Intermediate (중간연산) *-*-*-*
+
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■ Intermediate (중간연산) ■■■■■■■■■■■■■■■■■■■■■■■■
 - Filtering
 - Mapping
 - Sorting
 - Iterating
-map	    입력 T 타입 요소를 R 타입 요소로 변환
-filter	    조건을 충족하는 요소를 필터링
-flatMap	    중첩된 구조를 한 단계 평탄화하고 단일 원소로 변환한 스트림 생성
-peek	    스트림 내의 각각의 요소를 대상으로 특정 연산을 수행
-skip	    처음 n개의 요소를 제외하는 스트림 생성
-limit	    maxSize까지의 요소만 제공하는 스트림 생성
-distinct	    스트림 내의 요소의 중복 제거
-sorted	    스트림 내 요소를 정렬
+
+/* 사용 여부 */
+ - map : 입력 T 타입 요소를 R 타입 요소로 변환
+   * map : 기본 -> 기본 / 객체 -> 객체
+   * mapToObj : 기본타입 -> 객체타입
+   * mapToInt : 객체 -> 기본(Int)
+
+ - filter	    조건을 충족하는 요소를 필터링
+ - flatMap	    중첩된 구조를 한 단계 평탄화하고 단일 원소로 변환한 스트림 생성
+ - peek	    스트림 내의 각각의 요소를 대상으로 특정 연산을 수행
+ - skip	    처음 n개의 요소를 제외하는 스트림 생성
+ - limit	    maxSize까지의 요소만 제공하는 스트림 생성
+ - distinct	    스트림 내의 요소의 중복 제거
+ - sorted	    스트림 내 요소를 정렬 (opt : Comparator.reverseOrder())
 
 
-*-*-*-* Result (결과) *-*-*-*
-- Calculating
-- Reduction
-- Collecting
-- Matching
-- Iterating
-forEach	    스트림을 순회
-reduce	    연산을 이용해 모든 스트림 요소를 처리하여 하나의 결과로 만듦
-collect	    스트림의 연산 결과를 컬렉션 형태로 모아줌
+■■■■■■■■■■■■■■■■■■■■■■■■ Result (결과) ■■■■■■■■■■■■■■■■■■■■■■■■
+- Calculating : 요소 계산 작업
+  * sum()
+  * average()
+  * count()
+  * max()
+  * min()
 
-/*************************************************************/
+- Reduction  : 연산을 이용해 모든 스트림 요소를 처리하여 하나의 결과로 만듦
+  * reduce()
+
+- Collecting : 수집 -> 다른 컬렉션 및 데이터 구조화
+  * collect()
+
+- Matching : 일치 여부
+  * anyMatch()
+  * allMatch()
+  * noneMatch()
+
+- Iterating : 반복 처리
+  * forEach()
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
  * 메서드 레퍼런스 연산자
  객체::메소드 -> 왼쪽 객체의 오른쪽 메소드 사용 (따로 괄호 필요없음)
 

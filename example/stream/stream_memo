@@ -2,8 +2,15 @@
 생성 -> 중간 연산 -> 최종 연산 -> 결과
 
 ■■■■■■■■■■■■■■■■■■■■■■■■ Stream Add ■■■■■■■■■■■■■■■■■■■■■■■■
-- Arrays
+- Arrays : 배열
+  * e : Arrays.stream(arr)....
+
 - Collection, List, Set
+  * LIST e : ls.stream()...
+  * Map e :
+    > map.values().stream()...
+    > map.keySet().stream()...
+    > map.entrySet().stream()... .getKey() .getValue()
 - Empty
 
 - Stream.builder() :스트림 생성 (요소 추가(add))
@@ -13,13 +20,16 @@
     builder.add("B");
 
 - Stream.generate() : 무한스트림 생성
-   * e : Stream.generate(() -> "A");
+   * e : Stream.generate(() -> "A")...
 
 - Stream.iterate() : 초기값과 UnaryOperator 로 연속적인 요소를 생성함.
-   * e : Stream.iterate(1, n -> n + 1);
+   * e : Stream.iterate(1, n -> n + 1)...
 
-- String
+- String, Chars() : 문자열
+  * e : "".chars()...
+
 - Files
+
 - Parallel <-> Sequential
 
 - Stream.concat() : 두 스트림을 결합함.

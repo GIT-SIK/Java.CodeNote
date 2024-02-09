@@ -39,46 +39,42 @@
 
 
 ■■■■■■■■■■■■■■■■■■■■■■■■ Intermediate (중간연산) ■■■■■■■■■■■■■■■■■■■■■■■■
-- Filtering
-- Mapping
-- Sorting
-- Iterating
-
-/* 사용 여부 */
- - map : 입력 T 타입 요소를 R 타입 요소로 변환
+ - map : 요소 값 변경 (입력 T 타입 요소를 R 타입 요소로 변환)
    * map : 기본 -> 기본 / 객체 -> 객체
    * mapToObj : 기본타입 -> 객체타입
    * mapToInt : 객체 -> 기본(Int)
-
- - filter	    조건을 충족하는 요소를 필터링
- - flatMap	    중첩된 구조를 한 단계 평탄화하고 단일 원소로 변환한 스트림 생성
- - peek	    스트림 내의 각각의 요소를 대상으로 특정 연산을 수행
- - skip	    처음 n개의 요소를 제외하는 스트림 생성
- - limit	    maxSize까지의 요소만 제공하는 스트림 생성
- - distinct	    스트림 내의 요소의 중복 제거
- - sorted	    스트림 내 요소를 정렬 (opt : Comparator.reverseOrder())
+    > String은 객체타입으로 인식
+ - flatMap : 평탄화 -> 단일 변환
+ - filter : 조건 적용
+ - skip	: n번째 요소까지 무시
+ - limit : n번째 요소까지 출력
+ - distinct	: 중복 제거
+ - sorted : 정렬 (opt : Comparator.reverseOrder())
+ - peek	: 중간 요소 확인
 
 
 ■■■■■■■■■■■■■■■■■■■■■■■■ Result (결과) ■■■■■■■■■■■■■■■■■■■■■■■■
-- Calculating : 요소 계산 작업
+- Calculating : 요소 계산
   * sum()
   * average()
   * count()
   * max()
   * min()
 
-- Reduction  : 연산을 이용해 모든 스트림 요소를 처리하여 하나의 결과로 만듦
+- Reduction  : 각 요소를 모두 연산하여 하나의 결과로 만듦
   * reduce()
 
-- Collecting : 수집 -> 다른 컬렉션 및 데이터 구조화
+- Collecting : 요소를 수집 후 다른 컬렉션 및 데이터 구조화
   * collect()
 
-- Matching : 일치 여부
+- Matching : 검색 및 매칭
   * anyMatch()
   * allMatch()
   * noneMatch()
+  * findAny()
+  * findFirst()
 
-- Iterating : 반복 처리
+- Iterating : 각 요소를 연산에 사용 후 소모
   * forEach()
 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■

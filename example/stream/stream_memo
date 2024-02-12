@@ -58,13 +58,13 @@
 ■■■■■■■■■■■■■■■■■■■■■■■■ Result (결과) ■■■■■■■■■■■■■■■■■■■■■■■■
 - Calculating : 요소 계산
   * sum()
-  * average()
-  * count()
-  * max()
-  * min()
-
+  * average() - R : "T"Stream -> "T" or Optinal
+  * count() - R : "Long" Type
+  * max() - R : Optional<T>
+  * min() - R : Optional<T>
 - Reduction  : 각 요소를 모두 연산하여 하나의 결과로 만듦
   * reduce()
+  * orElse(기본값) : Optional이 있으면 반환 아니면 기본값 인자 반환
 
 - Collecting : 요소를 수집 후 다른 컬렉션 및 데이터 구조화
   * collect()
@@ -76,6 +76,8 @@
     > Collectors.summarizingLong()
     > Collectors.summarizingDouble()
     > Collectors.groupingBy()
+      ㄴ 단일 인수 : R -> Map(K, List<V>)
+      ㄴ 두개 인수 : R -> Map(K, V)
     > Collectors.partitioningBy()
 
   * toArray()
@@ -86,6 +88,7 @@
   * noneMatch()
   * findAny()
   * findFirst()
+  * ifPresent() : Optional이 있을 경우에만 동작할 인자를 받음.
 
 - Iterating : 각 요소를 연산에 사용 후 소모
   * forEach()

@@ -45,10 +45,9 @@ public class Stream7 {
         /* 문제 ( 단, Stream을 활용하여 풀 것.)
          * 문자열을 읽어 공백을 기준으로 나누어 각각 문자열에 대해 짝수번째 위치는 대문자, 홀수번째 위치는 소문자로 바꾼다. 0을 짝수로 본다.
          *  "ABCDEF" -> "AbCdEf" / "BG KER R" -> "Bg KeR R"
-         *  단 "BG KER R  " -> "Bg KeR R" 로 출력되는 문제가 발생됨.
          */
         int[] n = {-1};
-        return Arrays.stream(s.toUpperCase().split(" ")).map(t -> {
+        return Arrays.stream(s.toUpperCase().split(" ", -1)).map(t -> {
             n[0] = -1;
             return t.chars().mapToObj(c -> {
                 n[0]++;

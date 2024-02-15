@@ -1,4 +1,5 @@
 package Programmers.Default;
+import java.util.Arrays;
 import java.util.stream.*;
 
 public class Stream7 {
@@ -7,6 +8,7 @@ public class Stream7 {
 
         System.out.println(st7.solution("String Test Code"));
         System.out.println(st7.solution2("String Test Code"));
+        System.out.println("\"" + st7.solution3("St r ing  Test Code  ") + "\"");
 
     }
 
@@ -37,5 +39,24 @@ public class Stream7 {
             }
             return (char) c;
         }).map(Object::toString).collect(Collectors.joining());
+    }
+
+    public String solution3(String s) {
+        /* 문제 ( 단, Stream을 활용하여 풀 것.)
+         * 문자열을 읽어 공백을 기준으로 나누어 각각 문자열에 대해 짝수번째 위치는 대문자, 홀수번째 위치는 소문자로 바꾼다. 0을 짝수로 본다.
+         *  "ABCDEF" -> "AbCdEf" / "BG KER R" -> "Bg KeR R"
+         *  단 "BG KER R  " -> "Bg KeR R" 로 출력되는 문제가 발생됨.
+         */
+        int[] n = {-1};
+        return Arrays.stream(s.toUpperCase().split(" ")).map(t -> {
+            n[0] = -1;
+            return t.chars().mapToObj(c -> {
+                n[0]++;
+                if(n[0]%2 == 1) {
+                    return Character.toLowerCase((char) c);
+                }
+                return (char) c;
+            }).map(Object :: toString).collect(Collectors.joining());
+        }).collect(Collectors.joining(" "));
     }
 }

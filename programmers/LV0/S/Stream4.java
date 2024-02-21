@@ -1,10 +1,10 @@
-package Programmers.Default;
+package programmers.LV0.S;
 
 import java.util.Arrays;
 
-public class Stream9 {
+public class Stream4 {
     public static void main(String[] args) {
-        Stream9 st9 = new Stream9();
+        Stream4 st9 = new Stream4();
         System.out.println(st9.solution(new int[]{1,177,787}));
 
     }

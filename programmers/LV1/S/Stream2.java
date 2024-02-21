@@ -1,13 +1,11 @@
-package Programmers.Default;
+package programmers.LV1.S;
 
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
-import java.util.stream.Stream;
-
-public class Stream6 {
+public class Stream2 {
     public static void main(String[] args) {
-        Stream6 st6 = new Stream6();
+        Stream2 st6 = new Stream2();
         System.out.println(st6.solution("ftgedDhJsqP"));
     }
 

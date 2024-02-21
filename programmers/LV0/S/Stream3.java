@@ -1,11 +1,11 @@
-package Programmers.Default;
+package programmers.LV0.S;
 
 import java.util.stream.Collectors;
 
-public class Stream8 {
+public class Stream3 {
 
     public static void main(String[] args) {
-        Stream8 st8 = new Stream8();
+        Stream3 st8 = new Stream3();
         System.out.println(st8.solution("abc1abc1abc1abc"));
         // abc1abc1abc1abc -> a c 1 b 1 a c 1 b -> acbacb
     }

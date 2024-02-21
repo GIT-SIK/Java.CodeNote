@@ -1,8 +1,8 @@
-package programmers.Default;
+package programmers.LV1.S;
 
 import java.util.Arrays;
 
-public class Stream2 {
+public class Stream3 {
     public static void main(String[] args) {
         /* 문제 ( 단, Stream을 활용하여 풀 것.)
          * 자연수 뒤집어 배열로 출력하기.
@@ -10,7 +10,7 @@ public class Stream2 {
          * 578914 -> [4,1,9,8,7,5]
          * 118372 -> [2,7,3,8,1,1]
          * */
-        Stream2 st = new Stream2();
+        Stream3 st = new Stream3();
         System.out.println(Arrays.toString(st.solution(258747)));
         System.out.println(Arrays.toString(st.solution(578914)));
         System.out.println(Arrays.toString(st.solution(118372)));

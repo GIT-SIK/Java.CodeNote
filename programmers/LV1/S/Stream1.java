@@ -1,4 +1,4 @@
-package programmers.Default;
+package programmers.LV1.S;
 
 import java.util.Comparator;
 import java.util.stream.Collectors;

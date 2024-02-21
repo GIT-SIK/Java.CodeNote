@@ -1,10 +1,10 @@
-package programmers.Default;
+package programmers.LV0.S;
 import java.util.*;
 import java.util.stream.*;
 
-public class Stream5 {
+public class Stream2 {
     public static void main(String[] args) {
-        Stream5 st5 = new Stream5();
+        Stream2 st5 = new Stream2();
         String[] strArr = {"a","bc","d","efg","hi"};
 
         System.out.println(st5.solution(strArr)); // Stream 처리한 답

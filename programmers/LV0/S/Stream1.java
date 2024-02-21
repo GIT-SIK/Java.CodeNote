@@ -1,8 +1,8 @@
-package programmers.Default;
+package programmers.LV0.S;
 import java.util.Arrays;
 import java.util.stream.*;
 
-public class Stream4 {
+public class Stream1 {
     public static void main(String[] args) {
          /* 문제 ( 단, Stream을 활용하여 풀 것.)
          * strings 문자열에서 parts 값만큼 문자열 가져와서 합치기
@@ -13,7 +13,7 @@ public class Stream4 {
          *
           */
 
-        Stream4 st4 = new Stream4();
+        Stream1 st4 = new Stream1();
         String[] strings = {"progressive", "hamburger", "hammer", "ahocorasick"};
         int[][] parts = {{0, 4}, {1, 2}, {3, 5}, {7, 7}};
 

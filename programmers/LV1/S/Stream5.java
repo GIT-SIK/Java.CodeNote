@@ -1,10 +1,11 @@
-package programmers.Default;
+package programmers.LV1.S;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Stream3 {
+public class Stream5 {
     public static void main(String[] args) {
+        /* PCCE 기출문제 10번 / 데이터 분석*/
         /* 문제 ( 단, Stream을 활용하여 풀 것.)
         * code, date,  maximum, remain
         * {{1, 20300104, 100, 80}
@@ -24,7 +25,7 @@ public class Stream3 {
         * 입력 int[][] -> 출력 int[][]
         *
         */
-        Stream3 st3 = new Stream3();
+        Stream5 st3 = new Stream5();
         int[][] data = {{1, 20300104, 100, 80}, {2, 20300804, 847, 37}, {3, 20300401, 10, 8}};
         Arrays.stream(st3.solution(data, "date", 20300501, "remain")).map(Arrays::toString).forEach(System.out::println);
     }

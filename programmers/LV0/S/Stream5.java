@@ -25,6 +25,7 @@ public class Stream5 {
          */
         int[] dtArr = Arrays.stream(arr).distinct().limit(k).toArray();
         int[] cyArr = Arrays.copyOf(dtArr, k);
+        /* Arrays.fill(배열, 시작인덱스, 종료인덱스, 채우는 값) */
         Arrays.fill(cyArr,dtArr.length,cyArr.length, -1);
         return cyArr;
     }

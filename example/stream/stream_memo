@@ -30,8 +30,8 @@
 
 - Files
 
-- Parallel <-> Sequential
- * e : LIST.parallelStream()... -> try catch InterruptedException
+- Parallel ( <-> Sequential)
+ * e : ls.parallelStream()...
 
 - Stream.concat() : 두 스트림을 결합함.
    * 형식 : static <T> Stream<T> concat(Stream<? extends T> a, Stream<? extends T> b)

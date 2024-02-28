@@ -27,12 +27,12 @@ public class TParallel {
          * 총 작업속도 = x * 2s
          */
         List<Integer> lsInt1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
-        TimeUtil.methodExecutionTimer(() -> tp.tParallelY(lsInt1) ,"Parallel O",true);
-        TimeUtil.methodExecutionTimer(() -> tp.tParallelN(lsInt1),"Parallel X",true);
+        TimeUtil.methodExecutionTimer(() -> tp.tParallel(lsInt1) ,"Parallel",true);
+        TimeUtil.methodExecutionTimer(() -> tp.tSequential(lsInt1),"Sequential",true);
         TimeUtil.methodExecutionTimer(() -> tp.tParallelCustom(lsInt1),"Parallel Custom",true);
     }
 
-    public void tParallelY(List<Integer> ls){
+    public void tParallel(List<Integer> ls){
         ls.parallelStream().forEach(i -> {
             try {
                 Thread.sleep(2000);
@@ -43,7 +43,7 @@ public class TParallel {
         });
     }
 
-    public void tParallelN(List<Integer> ls){
+    public void tSequential(List<Integer> ls){
         ls.forEach(i -> {
             try {
                 Thread.sleep(2000);

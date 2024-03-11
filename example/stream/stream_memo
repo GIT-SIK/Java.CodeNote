@@ -13,7 +13,7 @@
     > map.entrySet().stream()... .getKey() .getValue()
 - Empty
 
-- Stream.builder() :스트림 생성 (요소 추가(add))
+- Stream.builder() : 스트림 생성 (요소 추가(add))
    * e :
     > Stream.Builder<String> builder = Stream.builder();
     > builder.add("A");
@@ -30,7 +30,7 @@
 
 - Files
 
-- Parallel ( <-> Sequential)
+- Parallel ( <-> Sequential) : 병렬 처리
  * e : ls.parallelStream()...
 
 - Stream.concat() : 두 스트림을 결합함.
@@ -46,7 +46,7 @@
    * mapToInt : 객체 -> 기본(Int)
     > String은 객체타입으로 인식
  - boxed : [단순] 기본 -> 객체
- - flatMap : 평탄화 -> 단일 변환 /
+ - flatMap : 평탄화 -> 단일 변환
     > 단일 변환시 1개씩 가져와 변환함.
      > {{1,2},{3,4}} 일 경우
      > 1 -> 1,2 -> 1,2,3 -> 1,2,3,4
@@ -56,12 +56,11 @@
  - distinct	: 중복 제거
  - sorted : 정렬 (opt : Comparator.reverseOrder())
  - peek	: 중간 요소 확인
- - Collectors.toList()
 
 
 ■■■■■■■■■■■■■■■■■■■■■■■■ Result (결과) ■■■■■■■■■■■■■■■■■■■■■■■■
 - Calculating : 요소 계산
-  * sum()
+  * sum() - R : "Int" or "Long" / Stream 타입에 따라 적용
   * average() - R : "T"Stream -> "T" or Optinal
   * count() - R : "Long" Type
   * max() - R : Optional<T>
@@ -84,7 +83,12 @@
       ㄴ 두개 인수 : R -> Map(K, V)
     > Collectors.partitioningBy()
 
-  * toArray()
+  * toArray() : / 인수 없을 시 Object[]
+    ㄴ 인수
+       ㄴ IntFunction<T[]> generator : 제네릭 타입
+       ㄴ IntFunction<A[]> generator : 생성자 함수
+       + 레퍼런스 연산자
+
 
 - Matching : 검색 및 매칭
   * anyMatch() : 1개 이상 요소가 조건에 적합시 t, 아니면 f
@@ -98,7 +102,7 @@
   * forEach()
 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
- * 메서드 레퍼런스 연산자
+* 메서드 레퍼런스 연산자
  객체::메소드 -> 왼쪽 객체의 오른쪽 메소드 사용 (따로 괄호 필요없음)
 
   class A{
@@ -110,6 +114,8 @@
 
  레퍼런스 : A::getB
 
+
+* 메서드 레퍼런스 유형
  1. 정적 메서드 레퍼런스
  람다 : Function<String, Integer> lambda = s -> Integer.parseInt(s);
  레퍼런스 : Function<String, Integer> reference = Integer::parseInt

@@ -1,4 +1,4 @@
-package Programmers.LV0.S;
+package programmers.LV0.S;
 
 import example.util.TimeUtil;
 import java.util.stream.*;

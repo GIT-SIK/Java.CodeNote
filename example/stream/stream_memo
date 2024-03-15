@@ -23,8 +23,9 @@
    * e : Stream.generate(() -> "A")...
 
 - Stream.iterate() : 초기값과 UnaryOperator 로 연속적인 요소를 생성함.
-   * e : Stream.iterate(1, n -> n + 1)...
-
+   * e : Stream.iterate(1, n -> n + 1)...   => R : Object
+   * e : IntStream.iterate(n, n-> n + 1)... => R : Int
+        ㄴ takeWhile : 조건에 맞는 값만 출력.
 - String, Chars() : 문자열
   * e : "".chars()...
 

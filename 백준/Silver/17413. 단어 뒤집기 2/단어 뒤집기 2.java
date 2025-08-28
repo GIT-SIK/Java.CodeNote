@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        Matcher matcher = Pattern.compile("<[^>]+>|\\s+|[^<\\s]+").matcher(br.readLine());
+        Matcher matcher = Pattern.compile("<[^>]*?>| |[^<\\s]+").matcher(br.readLine());
         List<String> divStr = new ArrayList<>(); 
         while (matcher.find()) {
             String mgs = matcher.group(0);
